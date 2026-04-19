@@ -1,0 +1,32 @@
+host: ${HOST:-0.0.0.0}
+port: ${PORT:-8080}
+ollamaBaseUrl: ${OLLAMA_BASE_URL:-http://localhost:11434}
+defaultModel: ${DEFAULT_MODEL:-qwen3.5:9b}
+apiKey: ""
+requestTimeoutSeconds: ${REQUEST_TIMEOUT_SECONDS:-60}
+maxConcurrentRequests: ${MAX_CONCURRENT_REQUESTS:-16}
+logLevel: ${LOG_LEVEL:-INFO}
+debugRequestResponseLogging: true
+debugLogRawAuthHeaders: false
+maxLoggedBodyChars: 20000
+
+logging:
+  level: ${LOG_LEVEL:-INFO}
+  loggers:
+    com.example.ollamaadapter: ${LOG_LEVEL:-INFO}
+    org.eclipse.jetty: INFO
+    org.glassfish.jersey: WARN
+  appenders:
+    - type: console
+      threshold: INFO
+      target: stdout
+      timeZone: UTC
+      logFormat: "%d{yyyy-MM-dd'T'HH:mm:ss.SSS,UTC} %-5level requestId=%X{requestId:-} [%thread] %logger{36} - %msg%n%dwEx"
+    - type: file
+      threshold: INFO
+      currentLogFilename: logs/adapter.log
+      archivedLogFilenamePattern: logs/adapter-%d.log.gz
+      archivedFileCount: 30
+      timeZone: UTC
+      immediateFlush: true
+      logFormat: "%d{yyyy-MM-dd'T'HH:mm:ss.SSS,UTC} %-5level requestId=%X{requestId:-} [%thread] %logger{36} - %msg%n%dwEx"

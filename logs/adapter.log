@@ -1,0 +1,1055 @@
+2026-04-17T18:40:00.547 INFO  requestId= [main] i.d.core.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+2026-04-17T18:40:00.550 INFO  requestId= [main] i.d.core.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+2026-04-17T18:40:00.550 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - application startup initiated
+2026-04-17T18:40:00.550 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - config loaded host=0.0.0.0 port=8080 ollamaBaseUrl=http://localhost:11434 defaultModel=qwen2.5:7b-instruct requestTimeoutSeconds=60 maxConcurrentRequests=16 authEnabled=false
+2026-04-17T18:40:00.550 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - API key auth is disabled
+2026-04-17T18:40:00.669 INFO  requestId= [main] i.d.core.server.ServerFactory - Starting ollama-openai-adapter
+2026-04-17T18:40:00.721 INFO  requestId= [main] o.e.jetty.setuid.SetUIDListener - Opened application@186cb891{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T18:40:00.721 INFO  requestId= [main] o.e.jetty.setuid.SetUIDListener - Opened admin@3ec2ecea{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T18:40:00.722 INFO  requestId= [main] org.eclipse.jetty.server.Server - jetty-11.0.26; built: 2025-08-14T18:03:14.457Z; git: 7559873b6e46eea7c2c6da2b58327ea2ecf941f4; jvm 17.0.18+8-LTS
+2026-04-17T18:40:00.726 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - application startup completed
+2026-04-17T18:40:00.982 INFO  requestId= [main] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /health (com.example.ollamaadapter.api.HealthResource)
+    POST    /v1/chat/completions (com.example.ollamaadapter.api.ChatCompletionsResource)
+    GET     /v1/models (com.example.ollamaadapter.api.ModelsResource)
+
+2026-04-17T18:40:00.983 INFO  requestId= [main] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@68c9e023{/,null,AVAILABLE}
+2026-04-17T18:40:00.986 INFO  requestId= [main] i.d.core.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+2026-04-17T18:40:00.986 INFO  requestId= [main] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@16da476c{/,null,AVAILABLE}
+2026-04-17T18:40:01.001 INFO  requestId= [main] o.e.jetty.server.AbstractConnector - Started application@186cb891{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T18:40:01.005 INFO  requestId= [main] o.e.jetty.server.AbstractConnector - Started admin@3ec2ecea{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T18:40:01.006 INFO  requestId= [main] org.eclipse.jetty.server.Server - Started Server@6137cf6e{STARTING}[11.0.26,sto=30000] @1446ms
+2026-04-17T18:40:01.006 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - server started connectors=2
+2026-04-17T18:40:29.904 INFO  requestId=cec3e6f3-ab83-4304-a00c-7be1a2f65883 [dw-62 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request endpoint="POST v1/chat/completions" contentType="application/json" userAgent="python-httpx/0.28.1"
+2026-04-17T18:40:29.919 INFO  requestId=cec3e6f3-ab83-4304-a00c-7be1a2f65883 [dw-62 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response endpoint="POST v1/chat/completions" statusCode=400 latencyMs=15 error="-"
+2026-04-17T18:43:16.734 INFO  requestId= [JettyShutdownThread] org.eclipse.jetty.server.Server - Stopped Server@6137cf6e{STOPPING}[11.0.26,sto=30000]
+2026-04-17T18:43:16.734 INFO  requestId= [JettyShutdownThread] org.eclipse.jetty.server.Server - Shutdown Server@6137cf6e{STOPPING}[11.0.26,sto=30000]
+2026-04-17T18:43:16.739 INFO  requestId= [JettyShutdownThread] o.e.jetty.server.AbstractConnector - Stopped application@186cb891{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T18:43:16.740 INFO  requestId= [JettyShutdownThread] o.e.jetty.server.AbstractConnector - Stopped admin@3ec2ecea{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T18:43:16.741 INFO  requestId= [JettyShutdownThread] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@16da476c{/,null,STOPPED}
+2026-04-17T18:43:16.745 INFO  requestId= [JettyShutdownThread] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@68c9e023{/,null,STOPPED}
+2026-04-17T18:43:16.746 INFO  requestId= [JettyShutdownThread] c.e.ollamaadapter.AdapterApplication - shutdown initiated
+2026-04-17T18:43:16.746 INFO  requestId= [JettyShutdownThread] c.e.ollamaadapter.AdapterApplication - shutdown completed
+2026-04-17T18:57:27.993 INFO  requestId= [main] i.d.core.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+2026-04-17T18:57:27.997 INFO  requestId= [main] i.d.core.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+2026-04-17T18:57:27.998 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - application startup initiated
+2026-04-17T18:57:27.998 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - config loaded host=0.0.0.0 port=8080 ollamaBaseUrl=http://localhost:11434 defaultModel=qwen3.5:9b requestTimeoutSeconds=60 maxConcurrentRequests=16 authEnabled=false debugRequestResponseLogging=true debugLogRawAuthHeaders=false maxLoggedBodyChars=20000
+2026-04-17T18:57:27.998 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - API key auth is disabled
+2026-04-17T18:57:28.146 INFO  requestId= [main] i.d.core.server.ServerFactory - Starting ollama-openai-adapter
+2026-04-17T18:57:28.209 INFO  requestId= [main] o.e.jetty.setuid.SetUIDListener - Opened application@7afbf561{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T18:57:28.210 INFO  requestId= [main] o.e.jetty.setuid.SetUIDListener - Opened admin@2f98635e{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T18:57:28.211 INFO  requestId= [main] org.eclipse.jetty.server.Server - jetty-11.0.26; built: 2025-08-14T18:03:14.457Z; git: 7559873b6e46eea7c2c6da2b58327ea2ecf941f4; jvm 17.0.18+8-LTS
+2026-04-17T18:57:28.215 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - application startup completed
+2026-04-17T18:57:28.483 INFO  requestId= [main] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /health (com.example.ollamaadapter.api.HealthResource)
+    POST    /v1/chat/completions (com.example.ollamaadapter.api.ChatCompletionsResource)
+    GET     /v1/models (com.example.ollamaadapter.api.ModelsResource)
+
+2026-04-17T18:57:28.485 INFO  requestId= [main] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@ab24484{/,null,AVAILABLE}
+2026-04-17T18:57:28.488 INFO  requestId= [main] i.d.core.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+2026-04-17T18:57:28.488 INFO  requestId= [main] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@2bbb44da{/,null,AVAILABLE}
+2026-04-17T18:57:28.503 INFO  requestId= [main] o.e.jetty.server.AbstractConnector - Started application@7afbf561{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T18:57:28.507 INFO  requestId= [main] o.e.jetty.server.AbstractConnector - Started admin@2f98635e{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T18:57:28.508 INFO  requestId= [main] org.eclipse.jetty.server.Server - Started Server@28501a4b{STARTING}[11.0.26,sto=30000] @1494ms
+2026-04-17T18:57:28.508 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - server started connectors=2
+2026-04-17T18:57:44.619 INFO  requestId=e0d8dac0-9609-4359-b85e-1ded415701a0 [dw-62 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=e0d8dac0-9609-4359-b85e-1ded415701a0 timestamp=2026-04-17T18:57:44.619281400Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[197], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "system",
+    "content" : [ {
+      "type" : "text",
+      "text" : "You are a helpful assistant."
+    } ]
+  }, {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "Hello!"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=2,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T18:57:44.635 INFO  requestId=e0d8dac0-9609-4359-b85e-1ded415701a0 [dw-62 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=e0d8dac0-9609-4359-b85e-1ded415701a0 statusCode=400 latencyMs=27 responseSource=success headers={Content-Type=[application/json]} body={"code":400,"message":"Unable to process JSON"}
+2026-04-17T19:01:00.691 INFO  requestId= [JettyShutdownThread] org.eclipse.jetty.server.Server - Stopped Server@28501a4b{STOPPING}[11.0.26,sto=30000]
+2026-04-17T19:01:00.692 INFO  requestId= [JettyShutdownThread] org.eclipse.jetty.server.Server - Shutdown Server@28501a4b{STOPPING}[11.0.26,sto=30000]
+2026-04-17T19:01:00.696 INFO  requestId= [JettyShutdownThread] o.e.jetty.server.AbstractConnector - Stopped application@7afbf561{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T19:01:00.696 INFO  requestId= [JettyShutdownThread] o.e.jetty.server.AbstractConnector - Stopped admin@2f98635e{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T19:01:00.697 INFO  requestId= [JettyShutdownThread] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@2bbb44da{/,null,STOPPED}
+2026-04-17T19:01:00.700 INFO  requestId= [JettyShutdownThread] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@ab24484{/,null,STOPPED}
+2026-04-17T19:01:00.702 INFO  requestId= [JettyShutdownThread] c.e.ollamaadapter.AdapterApplication - shutdown initiated
+2026-04-17T19:01:00.702 INFO  requestId= [JettyShutdownThread] c.e.ollamaadapter.AdapterApplication - shutdown completed
+2026-04-17T19:06:18.631 INFO  requestId= [main] i.d.core.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+2026-04-17T19:06:18.633 INFO  requestId= [main] i.d.core.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+2026-04-17T19:06:18.633 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - application startup initiated
+2026-04-17T19:06:18.634 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - config loaded host=0.0.0.0 port=8080 ollamaBaseUrl=http://localhost:11434 defaultModel=qwen3.5:9b requestTimeoutSeconds=60 maxConcurrentRequests=16 authEnabled=false debugRequestResponseLogging=true debugLogRawAuthHeaders=false maxLoggedBodyChars=20000
+2026-04-17T19:06:18.634 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - API key auth is disabled
+2026-04-17T19:06:18.760 INFO  requestId= [main] i.d.core.server.ServerFactory - Starting ollama-openai-adapter
+2026-04-17T19:06:18.816 INFO  requestId= [main] o.e.jetty.setuid.SetUIDListener - Opened application@2f98635e{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T19:06:18.816 INFO  requestId= [main] o.e.jetty.setuid.SetUIDListener - Opened admin@49c8f6e8{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T19:06:18.817 INFO  requestId= [main] org.eclipse.jetty.server.Server - jetty-11.0.26; built: 2025-08-14T18:03:14.457Z; git: 7559873b6e46eea7c2c6da2b58327ea2ecf941f4; jvm 17.0.18+8-LTS
+2026-04-17T19:06:18.821 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - application startup completed
+2026-04-17T19:06:19.057 INFO  requestId= [main] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /health (com.example.ollamaadapter.api.HealthResource)
+    POST    /v1/chat/completions (com.example.ollamaadapter.api.ChatCompletionsResource)
+    GET     /v1/models (com.example.ollamaadapter.api.ModelsResource)
+
+2026-04-17T19:06:19.058 INFO  requestId= [main] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@54e43bfe{/,null,AVAILABLE}
+2026-04-17T19:06:19.060 INFO  requestId= [main] i.d.core.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+2026-04-17T19:06:19.061 INFO  requestId= [main] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@2f80cb79{/,null,AVAILABLE}
+2026-04-17T19:06:19.076 INFO  requestId= [main] o.e.jetty.server.AbstractConnector - Started application@2f98635e{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T19:06:19.080 INFO  requestId= [main] o.e.jetty.server.AbstractConnector - Started admin@49c8f6e8{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T19:06:19.081 INFO  requestId= [main] org.eclipse.jetty.server.Server - Started Server@5b051a5c{STARTING}[11.0.26,sto=30000] @1449ms
+2026-04-17T19:06:19.082 INFO  requestId= [main] c.e.ollamaadapter.AdapterApplication - server started connectors=2
+2026-04-17T19:06:33.228 INFO  requestId=687ff414-bdcd-488a-8aa1-98a053fe1db5 [dw-62 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=687ff414-bdcd-488a-8aa1-98a053fe1db5 timestamp=2026-04-17T19:06:33.228141900Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[197], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "system",
+    "content" : [ {
+      "type" : "text",
+      "text" : "You are a helpful assistant."
+    } ]
+  }, {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "Hello!"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=2,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:06:33.243 INFO  requestId=687ff414-bdcd-488a-8aa1-98a053fe1db5 [dw-62 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:06:51.086 INFO  requestId=687ff414-bdcd-488a-8aa1-98a053fe1db5 [dw-62 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - Ollama response received operation=chat status=200 responseType=OllamaChatResponse
+2026-04-17T19:06:51.096 INFO  requestId=687ff414-bdcd-488a-8aa1-98a053fe1db5 [dw-62 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=687ff414-bdcd-488a-8aa1-98a053fe1db5 statusCode=200 latencyMs=17879 responseSource=success headers={Content-Type=[application/json]} body={"id":"chatcmpl-a6c24ab110864672b995dd1cd0d27ff4","object":"chat.completion","created":1776452811,"model":"qwen3.5:9b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello! \uD83D\uDC4B How can I help you today? Whether you have questions, need assistance with a project, or just want to chat, feel free to ask!","contentKind":"string"},"finish_reason":"stop"}],"usage":{"prompt_tokens":23,"completion_tokens":65,"total_tokens":88}}
+2026-04-17T19:06:51.150 INFO  requestId=b85d971c-5098-4b35-a854-763923cabd39 [dw-34 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=b85d971c-5098-4b35-a854-763923cabd39 timestamp=2026-04-17T19:06:51.150496500Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[466], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "||**IS REQUEST(KITE)**|\n|---|---|\n|**Case Ref No:**|CAS/IO2/2024/11/000070|\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:06:51.151 INFO  requestId=b85d971c-5098-4b35-a854-763923cabd39 [dw-34 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:06:51.154 INFO  requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d [dw-36 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d timestamp=2026-04-17T19:06:51.154411600Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[482], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "IO2/2024/11/000070|\n||**PERSONAL INFORMATION**|\n|**Name of Target:**<br>_Note: If there are\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:06:51.154 INFO  requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d [dw-36 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:06:51.155 INFO  requestId=40dc9492-2da8-413f-a563-d50aa3c9595b [dw-37 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=40dc9492-2da8-413f-a563-d50aa3c9595b timestamp=2026-04-17T19:06:51.155505400Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[486], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "rget._|Mohamad Alim Bawang|\n|**Alias / Codename:**<br>_Note: IC1 will use this Alias for all our\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:06:51.156 INFO  requestId=40dc9492-2da8-413f-a563-d50aa3c9595b [dw-37 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:06:51.167 INFO  requestId=ff4f8713-0054-4fa4-940a-5f643b82978b [dw-35 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=ff4f8713-0054-4fa4-940a-5f643b82978b timestamp=2026-04-17T19:06:51.167020200Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[485], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "_Note: If there are multiple targets, please use a new table_<br>_for each target._|Mohamad Alim\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:06:51.167 INFO  requestId=ff4f8713-0054-4fa4-940a-5f643b82978b [dw-35 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:07:15.651 INFO  requestId=b85d971c-5098-4b35-a854-763923cabd39 [dw-34 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - Ollama response received operation=chat status=200 responseType=OllamaChatResponse
+2026-04-17T19:07:15.652 INFO  requestId=b85d971c-5098-4b35-a854-763923cabd39 [dw-34 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=b85d971c-5098-4b35-a854-763923cabd39 statusCode=200 latencyMs=24503 responseSource=success headers={Content-Type=[application/json]} body={"id":"chatcmpl-fad8274eb2a948dc9be525fa536a1c87","object":"chat.completion","created":1776452835,"model":"qwen3.5:9b","choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\n  \"field\": \"CAS/IO2/2024/11/000070\"\n}\n```","contentKind":"string"},"finish_reason":"stop"}],"usage":{"prompt_tokens":116,"completion_tokens":1896,"total_tokens":2012}}
+2026-04-17T19:07:15.669 INFO  requestId=552d26b1-8c08-46d6-81ea-4cfa11b159da [dw-60 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=552d26b1-8c08-46d6-81ea-4cfa11b159da timestamp=2026-04-17T19:07:15.669512200Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[471], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "s Alias for all our updates._|“Alim Babu”|\n|**NRIC/ Passport No:**|S1251251E|\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:07:15.670 INFO  requestId=552d26b1-8c08-46d6-81ea-4cfa11b159da [dw-60 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:07:51.167 ERROR requestId=ff4f8713-0054-4fa4-940a-5f643b82978b [dw-35 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - timeout while calling Ollama operation=chat
+! java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-17T19:07:51.167 ERROR requestId=40dc9492-2da8-413f-a563-d50aa3c9595b [dw-37 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - timeout while calling Ollama operation=chat
+! java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-17T19:07:51.166 ERROR requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d [dw-36 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - timeout while calling Ollama operation=chat
+! java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-17T19:07:51.171 ERROR requestId=ff4f8713-0054-4fa4-940a-5f643b82978b [dw-35 - POST /v1/chat/completions] c.e.o.e.GlobalExceptionMapper - handled API exception requestId=ff4f8713-0054-4fa4-940a-5f643b82978b status=504 code=ollama_timeout message=Ollama request timed out. rootCauseClass=java.net.http.HttpTimeoutException rootCauseMessage=request timed out
+! com.example.ollamaadapter.exception.ApiException: Ollama request timed out.
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:92)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+! Caused by: java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! ... 71 common frames omitted
+2026-04-17T19:07:51.171 ERROR requestId=40dc9492-2da8-413f-a563-d50aa3c9595b [dw-37 - POST /v1/chat/completions] c.e.o.e.GlobalExceptionMapper - handled API exception requestId=40dc9492-2da8-413f-a563-d50aa3c9595b status=504 code=ollama_timeout message=Ollama request timed out. rootCauseClass=java.net.http.HttpTimeoutException rootCauseMessage=request timed out
+! com.example.ollamaadapter.exception.ApiException: Ollama request timed out.
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:92)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+! Caused by: java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! ... 71 common frames omitted
+2026-04-17T19:07:51.171 ERROR requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d [dw-36 - POST /v1/chat/completions] c.e.o.e.GlobalExceptionMapper - handled API exception requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d status=504 code=ollama_timeout message=Ollama request timed out. rootCauseClass=java.net.http.HttpTimeoutException rootCauseMessage=request timed out
+! com.example.ollamaadapter.exception.ApiException: Ollama request timed out.
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:92)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+! Caused by: java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! ... 71 common frames omitted
+2026-04-17T19:07:51.183 INFO  requestId=ff4f8713-0054-4fa4-940a-5f643b82978b [dw-35 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=ff4f8713-0054-4fa4-940a-5f643b82978b statusCode=504 latencyMs=60016 responseSource=downstream_ollama_failure headers={Content-Type=[application/json]} body={"error":{"message":"Ollama request timed out.","type":"adapter_error","param":null,"code":"ollama_timeout"}}
+2026-04-17T19:07:51.183 INFO  requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d [dw-36 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=2006138b-b476-4ada-a2b1-1e57dcc9c88d statusCode=504 latencyMs=60030 responseSource=downstream_ollama_failure headers={Content-Type=[application/json]} body={"error":{"message":"Ollama request timed out.","type":"adapter_error","param":null,"code":"ollama_timeout"}}
+2026-04-17T19:07:51.183 INFO  requestId=40dc9492-2da8-413f-a563-d50aa3c9595b [dw-37 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=40dc9492-2da8-413f-a563-d50aa3c9595b statusCode=504 latencyMs=60029 responseSource=downstream_ollama_failure headers={Content-Type=[application/json]} body={"error":{"message":"Ollama request timed out.","type":"adapter_error","param":null,"code":"ollama_timeout"}}
+2026-04-17T19:07:54.436 INFO  requestId=1fc765c2-5388-4b75-91cd-ffe2ba76c3f2 [dw-38 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=1fc765c2-5388-4b75-91cd-ffe2ba76c3f2 timestamp=2026-04-17T19:07:54.436155100Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[486], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "rget._|Mohamad Alim Bawang|\n|**Alias / Codename:**<br>_Note: IC1 will use this Alias for all our\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:07:54.436 INFO  requestId=1fc765c2-5388-4b75-91cd-ffe2ba76c3f2 [dw-38 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:07:54.528 INFO  requestId=815a392d-4361-4345-a204-e4603a47a4cc [dw-39 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=815a392d-4361-4345-a204-e4603a47a4cc timestamp=2026-04-17T19:07:54.528910200Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[485], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "_Note: If there are multiple targets, please use a new table_<br>_for each target._|Mohamad Alim\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:07:54.529 INFO  requestId=815a392d-4361-4345-a204-e4603a47a4cc [dw-39 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:07:55.080 INFO  requestId=a602e185-ebb2-4655-97a1-28a020acbb31 [dw-40 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=a602e185-ebb2-4655-97a1-28a020acbb31 timestamp=2026-04-17T19:07:55.080632400Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[482], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "IO2/2024/11/000070|\n||**PERSONAL INFORMATION**|\n|**Name of Target:**<br>_Note: If there are\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:07:55.081 INFO  requestId=a602e185-ebb2-4655-97a1-28a020acbb31 [dw-40 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:08:15.427 INFO  requestId=552d26b1-8c08-46d6-81ea-4cfa11b159da [dw-60 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - Ollama response received operation=chat status=200 responseType=OllamaChatResponse
+2026-04-17T19:08:15.428 INFO  requestId=552d26b1-8c08-46d6-81ea-4cfa11b159da [dw-60 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=552d26b1-8c08-46d6-81ea-4cfa11b159da statusCode=200 latencyMs=59760 responseSource=success headers={Content-Type=[application/json]} body={"id":"chatcmpl-fa1de14de2e94b5f82c8db0d2485427d","object":"chat.completion","created":1776452895,"model":"qwen3.5:9b","choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\n  \"field\": \"S1251251E\"\n}\n```","contentKind":"string"},"finish_reason":"stop"}],"usage":{"prompt_tokens":109,"completion_tokens":1961,"total_tokens":2070}}
+2026-04-17T19:08:18.430 INFO  requestId=1fc765c2-5388-4b75-91cd-ffe2ba76c3f2 [dw-38 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - Ollama response received operation=chat status=200 responseType=OllamaChatResponse
+2026-04-17T19:08:18.431 INFO  requestId=1fc765c2-5388-4b75-91cd-ffe2ba76c3f2 [dw-38 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=1fc765c2-5388-4b75-91cd-ffe2ba76c3f2 statusCode=200 latencyMs=23996 responseSource=success headers={Content-Type=[application/json]} body={"id":"chatcmpl-abf71f19ab1747d09ec86b76758aa34c","object":"chat.completion","created":1776452898,"model":"qwen3.5:9b","choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\n  \"field\": \"Unable to process this request. I cannot validate or handle information that appears to contain personal identifiers, codenames, or security-related content.\"\n}\n```","contentKind":"string"},"finish_reason":"stop"}],"usage":{"prompt_tokens":107,"completion_tokens":239,"total_tokens":346}}
+2026-04-17T19:08:20.778 INFO  requestId=815a392d-4361-4345-a204-e4603a47a4cc [dw-39 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - Ollama response received operation=chat status=200 responseType=OllamaChatResponse
+2026-04-17T19:08:20.779 INFO  requestId=815a392d-4361-4345-a204-e4603a47a4cc [dw-39 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=815a392d-4361-4345-a204-e4603a47a4cc statusCode=200 latencyMs=26251 responseSource=success headers={Content-Type=[application/json]} body={"id":"chatcmpl-5d9793f9ae34405f9e3602f4a2fe196f","object":"chat.completion","created":1776452900,"model":"qwen3.5:9b","choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\n  \"field\": \"Mohamad Alim\"\n}\n```","contentKind":"string"},"finish_reason":"stop"}],"usage":{"prompt_tokens":100,"completion_tokens":186,"total_tokens":286}}
+2026-04-17T19:08:55.095 ERROR requestId=a602e185-ebb2-4655-97a1-28a020acbb31 [dw-40 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - timeout while calling Ollama operation=chat
+! java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-17T19:08:55.096 ERROR requestId=a602e185-ebb2-4655-97a1-28a020acbb31 [dw-40 - POST /v1/chat/completions] c.e.o.e.GlobalExceptionMapper - handled API exception requestId=a602e185-ebb2-4655-97a1-28a020acbb31 status=504 code=ollama_timeout message=Ollama request timed out. rootCauseClass=java.net.http.HttpTimeoutException rootCauseMessage=request timed out
+! com.example.ollamaadapter.exception.ApiException: Ollama request timed out.
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:92)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+! Caused by: java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! ... 71 common frames omitted
+2026-04-17T19:08:55.097 INFO  requestId=a602e185-ebb2-4655-97a1-28a020acbb31 [dw-40 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=a602e185-ebb2-4655-97a1-28a020acbb31 statusCode=504 latencyMs=60017 responseSource=downstream_ollama_failure headers={Content-Type=[application/json]} body={"error":{"message":"Ollama request timed out.","type":"adapter_error","param":null,"code":"ollama_timeout"}}
+2026-04-17T19:09:02.041 INFO  requestId=62426ad5-1153-464d-8bcc-905947997957 [dw-43 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=62426ad5-1153-464d-8bcc-905947997957 timestamp=2026-04-17T19:09:02.041160800Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[482], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "IO2/2024/11/000070|\n||**PERSONAL INFORMATION**|\n|**Name of Target:**<br>_Note: If there are\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:09:02.042 INFO  requestId=62426ad5-1153-464d-8bcc-905947997957 [dw-43 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:10:02.043 ERROR requestId=62426ad5-1153-464d-8bcc-905947997957 [dw-43 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - timeout while calling Ollama operation=chat
+! java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-17T19:10:02.044 ERROR requestId=62426ad5-1153-464d-8bcc-905947997957 [dw-43 - POST /v1/chat/completions] c.e.o.e.GlobalExceptionMapper - handled API exception requestId=62426ad5-1153-464d-8bcc-905947997957 status=504 code=ollama_timeout message=Ollama request timed out. rootCauseClass=java.net.http.HttpTimeoutException rootCauseMessage=request timed out
+! com.example.ollamaadapter.exception.ApiException: Ollama request timed out.
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:92)
+! at com.example.ollamaadapter.client.OllamaClientImpl.chat(OllamaClientImpl.java:70)
+! at com.example.ollamaadapter.service.ChatCompletionService.createCompletion(ChatCompletionService.java:30)
+! at com.example.ollamaadapter.api.ChatCompletionsResource.createChatCompletion(ChatCompletionsResource.java:57)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+! at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+! at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+! at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at io.dropwizard.metrics.jetty11.InstrumentedHandler.handle(InstrumentedHandler.java:313)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:26)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:46)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+! at org.eclipse.jetty.server.Server.handle(Server.java:563)
+! at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+! at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+! at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:193)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+! at java.base/java.lang.Thread.run(Thread.java:840)
+! Caused by: java.net.http.HttpTimeoutException: request timed out
+! at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:898)
+! at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+! at com.example.ollamaadapter.client.OllamaClientImpl.send(OllamaClientImpl.java:75)
+! ... 71 common frames omitted
+2026-04-17T19:10:02.044 INFO  requestId=62426ad5-1153-464d-8bcc-905947997957 [dw-43 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=62426ad5-1153-464d-8bcc-905947997957 statusCode=504 latencyMs=60005 responseSource=downstream_ollama_failure headers={Content-Type=[application/json]} body={"error":{"message":"Ollama request timed out.","type":"adapter_error","param":null,"code":"ollama_timeout"}}
+2026-04-17T19:10:16.618 INFO  requestId=40922f09-fed5-4ba5-8b0b-159b559e3f9d [dw-38 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - incoming request requestId=40922f09-fed5-4ba5-8b0b-159b559e3f9d timestamp=2026-04-17T19:10:16.618318200Z method=POST path="v1/chat/completions" query="-" clientAddress="-" contentType="application/json" userAgent="python-httpx/0.28.1" authHeaderPresent=true authorization="Bear...geme" headers={Accept=[*/*], Accept-Encoding=[gzip, deflate], Authorization=[Bear...geme], Connection=[keep-alive], Content-Length=[482], Content-Type=[application/json], Host=[localhost:8080], User-Agent=[python-httpx/0.28.1]} rawBody={
+  "model" : "qwen3.5:9b",
+  "messages" : [ {
+    "role" : "user",
+    "content" : [ {
+      "type" : "text",
+      "text" : "IO2/2024/11/000070|\n||**PERSONAL INFORMATION**|\n|**Name of Target:**<br>_Note: If there are\n\n* Your response must be in JSON format.\n* Your JSON response must be returned within a Markdown, ```json code fence.\n* The JSON format is given as a JSON Schema description within <response_schema> markup tags.\n\n<response_schema>\n{\"field\": \"string\"}\n</response_schema>"
+    } ]
+  } ],
+  "temperature" : 0.7
+} parsedSummary=chatCompletionSummary{modelPresent=true,messagesCount=1,stream=unset,temperature=0.7,top_p=unset,max_tokens=unset,unknownFields=[]}
+2026-04-17T19:10:16.619 INFO  requestId=40922f09-fed5-4ba5-8b0b-159b559e3f9d [dw-38 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - outgoing Ollama call operation=chat model=qwen3.5:9b stream=false
+2026-04-17T19:10:42.189 INFO  requestId=40922f09-fed5-4ba5-8b0b-159b559e3f9d [dw-38 - POST /v1/chat/completions] c.e.o.client.OllamaClientImpl - Ollama response received operation=chat status=200 responseType=OllamaChatResponse
+2026-04-17T19:10:42.190 INFO  requestId=40922f09-fed5-4ba5-8b0b-159b559e3f9d [dw-38 - POST /v1/chat/completions] c.e.o.core.ApiLoggingFilter - outgoing response requestId=40922f09-fed5-4ba5-8b0b-159b559e3f9d statusCode=200 latencyMs=25573 responseSource=success headers={Content-Type=[application/json]} body={"id":"chatcmpl-8d768e66e9834e33aa926e998b46c1b4","object":"chat.completion","created":1776453042,"model":"qwen3.5:9b","choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\"field\": \"No personal information available in the provided text.\"}\n```","contentKind":"string"},"finish_reason":"stop"}],"usage":{"prompt_tokens":114,"completion_tokens":2034,"total_tokens":2148}}
+2026-04-17T19:13:43.672 INFO  requestId= [JettyShutdownThread] org.eclipse.jetty.server.Server - Stopped Server@5b051a5c{STOPPING}[11.0.26,sto=30000]
+2026-04-17T19:13:43.672 INFO  requestId= [JettyShutdownThread] org.eclipse.jetty.server.Server - Shutdown Server@5b051a5c{STOPPING}[11.0.26,sto=30000]
+2026-04-17T19:13:43.676 INFO  requestId= [JettyShutdownThread] o.e.jetty.server.AbstractConnector - Stopped application@2f98635e{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-04-17T19:13:43.677 INFO  requestId= [JettyShutdownThread] o.e.jetty.server.AbstractConnector - Stopped admin@49c8f6e8{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2026-04-17T19:13:43.677 INFO  requestId= [JettyShutdownThread] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@2f80cb79{/,null,STOPPED}
+2026-04-17T19:13:43.681 INFO  requestId= [JettyShutdownThread] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@54e43bfe{/,null,STOPPED}
+2026-04-17T19:13:43.682 INFO  requestId= [JettyShutdownThread] c.e.ollamaadapter.AdapterApplication - shutdown initiated
+2026-04-17T19:13:43.682 INFO  requestId= [JettyShutdownThread] c.e.ollamaadapter.AdapterApplication - shutdown completed
